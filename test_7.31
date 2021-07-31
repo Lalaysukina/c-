@@ -1,0 +1,106 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+
+
+int main()
+{
+	int arr[4][3] = { 1, 2, 3, 4, 5, };
+	int i = 0;
+	for (i = 0; i < 4; i++)
+	{
+		int m = 0;
+		for(m = 0; m < 3;m++ )
+		{
+			printf("%d ", arr[i][m]);
+		}
+		printf("\n");
+	}
+}
+
+int my_strlen(char* len)
+{
+	if (*len != '\0')
+		return 1 + my_strlen(len+1);
+	else
+		return 0;
+}
+int main()
+{
+	char arr[] = "bit";
+	int len = my_strlen(arr);
+	printf("%d", len);
+}
+
+void print(int a)
+{
+	printf("抱着");
+	a--;
+	if (a < 1)
+		printf("抱着小鲤鱼");
+	else
+		print(a);
+	printf("的我");
+}
+int main()
+{
+	int a = 3;
+	printf("吓着我抱起了");
+	print(a);
+}
+
+void print(int a)
+{
+	if (a > 9)
+	{
+		print(a / 10);
+	}
+	printf("%d ", a%10);
+}
+
+int main()
+{
+	int a = 0;
+	scanf("%d", &a);
+	print(a);
+}
+
+int is_prime(int x)
+{
+	int y = 0;
+	for (y = 2; y < x; y++)
+	{
+		if (x%y == 0)
+			return 0;
+	}
+	return 1;
+}
+int main()
+{
+	int i = 0;
+	int count = 0;
+	for (i = 100; i <= 200; i++)
+	{
+		if (is_prime(i) == 1)
+			printf("%d ", i);
+	}
+}
+void add(int a)
+{
+	int b;
+	for (b = 2; b < a; b++)
+	{
+		if (a%b == 0)
+		{
+			printf("%d不是素数\n", a);
+			break;
+		}
+	}
+	if (a == b)
+		printf("%d是一个素数\n", a);
+}
+int main()
+{
+	int x = 0;
+	scanf("%d", &x);
+	add(x);
+}
