@@ -1,0 +1,12 @@
+void count(int x)
+{
+	if (x > 9)
+		count(x / 10);
+	printf("%d ", x % 10);
+}
+int main()
+{
+	int a;
+	scanf("%d", &a);
+	count(a);
+}
