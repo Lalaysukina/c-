@@ -1,0 +1,20 @@
+# c-int cmp(const void *a, const void *b)
+{
+	return (int)(*(float*)a - *(float*)b);
+}
+
+void test()
+{
+	float f[] = { 1.4, 1.3, 3.5, 5.4, 6.7 };
+	int sz = sizeof(f) / sizeof(0);
+	qsort(f, sz, sizeof(0), cmp);
+	int i;
+	for (i = 0; i < sz; i++)
+		printf("%f ", f[i]);
+}
+
+int main()
+{
+	test();
+	return 0;
+}
