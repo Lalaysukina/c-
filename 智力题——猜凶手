@@ -1,0 +1,10 @@
+# c-
+int main()
+{
+	int murderer;
+	for (murderer = 'a'; murderer <= 'd'; murderer++)
+	{
+		if ((murderer != 'a') + (murderer == 'c') + (murderer == 'd') + (murderer != 'd') == 3)
+			printf("凶手是%c", murderer);
+	}
+}
