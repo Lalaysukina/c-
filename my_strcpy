@@ -1,0 +1,16 @@
+# c-
+#include <assert.h>
+
+void my_strcpy(char* a, const char* b)
+{
+	assert(a && b); 
+	while (*a != 0)
+	{
+		a++;
+	}
+	while (*a++ = *b++)
+	{
+		;
+	}
+	*a = *b;
+}
