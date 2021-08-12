@@ -1,7 +1,7 @@
 # c-
 #include <assert.h>
 
-void my_strcpy(char* a, const char* b)
+void my_strcat(char* a, const char* b)
 {
 	assert(a && b); 
 	while (*a != 0)
