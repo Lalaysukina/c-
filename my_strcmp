@@ -1,0 +1,17 @@
+# c-
+#include <assert.h>
+
+int my_strcmp(const char* a,const char* b)
+{
+	assert(a && b); 
+	while (*a || *b)
+	{
+		if (*a > *b)
+			return 1;
+		if (*a < *b)
+			return -1;
+		a++;
+		b++;
+	}
+	return 0;
+}
