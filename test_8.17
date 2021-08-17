@@ -1,0 +1,15 @@
+# c-
+void getmemory(char** p)
+{
+	*p = (char*)malloc(100);
+}
+
+void test()
+{
+	char* str;
+	getmemory(&str);
+	strcpy(str, "hello world");
+	printf(str);
+	free(str);
+	str = NULL;
+}
