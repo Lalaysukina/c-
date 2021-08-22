@@ -1,0 +1,13 @@
+# c-
+struct s
+{
+	int n;
+	float f;
+	char c;
+}s;
+
+int main()
+{
+	fscanf(stdin, "%d %f %c", &(s.n), &(s.f), &(s.c));
+	fprintf(stdout, "%d %f %c", s.n, s.f, s.c);
+}
