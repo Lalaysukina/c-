@@ -1,0 +1,15 @@
+# c-
+int main()
+{
+	FILE* pf;
+	char ch;
+	pf = fopen("test,txt", "r");
+	ch = fgetc(pf);
+	while (ch != EOF)
+	{
+		printf("%c", ch);
+		ch = fgetc(pf);
+	}
+	fclose(pf);
+	pf = NULL;
+}
