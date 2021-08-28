@@ -1,0 +1,19 @@
+# c-
+int main()
+{
+	int i, n, t = 0, t1 = 1, nextTerm;
+
+	printf("输出几项: ");
+	scanf("%d", &n);
+
+	printf("斐波那契数列: ");
+
+	for (i = 1; i <= n; ++i)
+	{
+		printf("%d, ", t);
+		nextTerm = t + t1;
+		t = t1;
+		t1 = nextTerm;
+	}
+	return 0;
+}
