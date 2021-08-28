@@ -1,0 +1,12 @@
+# c-
+int fibonacci(int n)
+{
+	return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	printf("%d\n",fibonacci(n));
+}
