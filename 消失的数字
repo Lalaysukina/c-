@@ -1,0 +1,17 @@
+# c-
+int main()
+{
+	int arr[] = { 3, 4, 1, 0 };
+	int i,ret1,ret2;
+	int n = sizeof(arr) / sizeof(1);
+	for (i = 0; i < n ; i++)
+	{
+		ret1 ^= arr[i];
+	}
+	for (i = 0; i <= n; i++)
+	{
+		ret2 ^= i;
+	}
+	printf("%d\n", ret1^ret2);
+	return 0;
+}
